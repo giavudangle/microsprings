@@ -1,0 +1,27 @@
+version: "3"
+services:
+  postgres-cluster-one:
+    container_name: pqsql-department-service
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    volumes:
+      - /data/postgres:/data/postgres
+    env_file:
+      - department-service.env
+    networks:
+      - postgres
+  postgres-cluster-two:
+    container_name: pqsql-user-service
+    image: postgres:latest
+    ports:
+      - "5433:5432"
+    volumes:
+      - /data/postgres:/data/postgres
+    env_file:
+      - user-service.env
+    networks:
+      - postgres
+networks:
+  postgres:
+    driver: bridge
