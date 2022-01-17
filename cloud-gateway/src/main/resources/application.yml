@@ -25,14 +25,7 @@ spring:
               args:
                 name: DEPARTMENT-SERVICE
                 fallbackuri: foward:/department-service-fallback
-eureka:
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://localhost:9000/eureka
-  instance:
-    hostname: localhost
+
 
 hystrix:
   command:
