@@ -8,5 +8,5 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/giavudangle/micro-springs-config-server
+          uri: https://github.com/giavudangle/micro-springs
           clone-on-start: true
